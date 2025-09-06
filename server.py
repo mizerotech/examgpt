@@ -16,6 +16,9 @@ def solve_exam():
             return jsonify({"answer": "No screenshot"}), 400
         
         file = request.files['screenshot']
+        if file.filename == '':
+            return jsonify({"answer": "No selected file"}), 400
+        
         file.save("question.jpg")
         
         myfile = genai.upload_file("question.jpg")
@@ -25,9 +28,9 @@ def solve_exam():
         return jsonify({"answer": response.text.strip()})
     except Exception as e:
         print("Server error:", str(e))
-        return jsonify({"answer": "Error. Try again."})
+        return jsonify({"answer": "Error. Try again."}), 500
 
 # === CRITICAL: Bind to 0.0.0.0 + PORT for Render ===
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))  # Render uses PORT env var
-    app.run(host='0.0.0.0', port=port, debug=False)  # debug=False for production
+    app.run(host='0.0.0.0', port=port, debug=False)  # MUST bind to 0.0.0.0
