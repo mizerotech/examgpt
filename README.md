@@ -1,2 +1,19 @@
-# examgpt
-Cluely (ExamGPT) — Rwanda’s #1 AI Exam Cheat Engine 🤖📚 Flask + Gemini server that solves exam questions from screenshots → powers “Cluely.exe” — the app that gets students A+ without studying. Built by Mizero Jeanpaul . Monetized via MTN MoMo (0798960545). Pay RWF 10,000 → Get A+.
+# 🤖 Cluely Server — The AI Brain
+
+> “The robot teacher that never sleeps.” — Powering Cluely.exe, Rwanda’s most viral exam cheat engine.
+
+## 💡 What It Does
+
+- Receives screenshots of exam questions from `Cluely.exe` (student’s PC).
+- Uses **Google Gemini 1.5 Flash** to solve ANY question (Math, Code, History, Physics).
+- Returns **ONLY the final answer** — clean, fast, undetectable.
+- Deployed on **Render.com** — free, scalable, always-on.
+
+## 🚀 How It Works
+
+```mermaid
+graph LR
+A[Cluely.exe] -->|POST screenshot.jpg| B(Cluely Server on Render)
+B --> C[Gemini AI]
+C --> D[Returns Answer]
+D --> A[Auto-types into exam]
