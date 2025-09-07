@@ -10,7 +10,7 @@ import tempfile
 app = Flask(__name__)
 
 # Get Gemini key from env (Render)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyDHYCHEqaQbu5CqxNN3ACLLKsjA1A6ILHU")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyD4n6Oj_RyjfQkm61RQwP0xEqnknJ4bKHI")
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
