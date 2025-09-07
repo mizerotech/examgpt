@@ -33,8 +33,4 @@ def solve_exam():
 # === CRITICAL: Bind to 0.0.0.0 + PORT for Render ===
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 10000))  # Render uses PORT env var
-<<<<<<< HEAD
-    app.run(host='0.0.0.0', port=port, debug=False)  # MUST bind to 0.0.0.0
-=======
-    app.run(host='0.0.0.0', port=port, debug=False)  # MUST bind to 0.0.0.0
->>>>>>> fc395378ce73a25196e56cae9be9e4d249aedcd8
+
